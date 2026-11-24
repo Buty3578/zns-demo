@@ -1,7 +1,7 @@
 'use strict';
 const scope = new URL(self.registration.scope);
 const prefix = 'zns-demo-pwa:' + scope.pathname + ':';
-const cacheName = prefix + '2026-11-24-v5';
+const cacheName = prefix + '2026-11-24-v6';
 const index = new URL('index.html', scope).href;
 const assets = [
   'index.html', 'studio-data.js', 'install.js', 'assets/studio-logo.png', 'manifest.webmanifest', 'icons/apple-touch-icon.png',
