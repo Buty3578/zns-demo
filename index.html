@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self'; manifest-src 'self'; worker-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'"><meta name="theme-color" content="#26372c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Заметь наш стиль"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png"><title>Заметь наш стиль</title><meta name="description" content="Демонстрация приложения «Заметь наш стиль» с публичным расписанием студии."><style>*{box-sizing:border-box}body{margin:0;background:#f5f5ef;color:#1b211e;font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.6}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #5b6f30;outline-offset:4px}button{min-height:44px}a{color:inherit}.demo-banner{background:#26372c;color:#f2f5dc;text-align:center;padding:8px 16px;font-size:13px;letter-spacing:.025em}.shell{display:grid;grid-template-columns:225px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:38px 24px;display:flex;flex-direction:column;border-right:1px solid #dedfd5;background:#eeefe7}.brand{display:flex;gap:12px;align-items:center;font-weight:900;font-size:44px;line-height:1;text-decoration:none;letter-spacing:-3px}.brand span{font-size:10px;letter-spacing:1px;line-height:1.4}nav{display:grid;gap:8px;margin-top:60px}nav button{display:flex;align-items:center;gap:15px;border:0;background:transparent;border-radius:12px;padding:12px 14px;text-align:left;font-size:15px;color:#50574d}nav button[aria-current]{background:#26372c;color:#ecf3db}nav span{font-size:20px;width:20px;text-align:center}.side-note{font-weight:650;line-height:1.25;font-size:26px;margin:70px 12px 35px;color:#6b7462}.reset{margin-top:auto;align-self:flex-start}.workspace{min-width:0;padding:32px 44px}header{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:25px}h1{font-size:32px;letter-spacing:-1px;margin:4px 0}.eyebrow{font-size:11px;font-weight:750;letter-spacing:1.6px;color:#626c56}.selectors{display:flex;gap:12px}label{display:grid;gap:5px;font-size:12px;font-weight:550;color:#58604e}select,input,textarea{background:#fff;border:1px solid #cbd0c1;border-radius:9px;padding:9px 10px;color:#283125;min-width:0;max-width:100%;font-size:14px;min-height:44px}.hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:15px;background:#dceaa9;border-radius:24px;padding:40px;overflow:hidden}.hero h2{font-size:clamp(30px,3.5vw,54px);font-weight:700;line-height:1.06;letter-spacing:-2px;margin:20px 0}.hero p{max-width:400px;font-size:15px;color:#405035}.primary,.secondary,.quiet{border:0;border-radius:10px;padding:11px 17px;font-size:14px;line-height:1.4;font-weight:550}.primary{background:#26372c;color:#fff}.secondary{background:#e8eddd;color:#26372c}.quiet{background:transparent;color:#344629;padding-left:0;padding-right:0}.hero .primary{margin-top:15px}.graphic{position:relative;text-align:center;transform:rotate(-11deg);color:#26372c;padding:20px}.graphic>span{font-size:clamp(100px,17vw,220px);font-weight:950;line-height:1;text-shadow:14px 12px 0 #bfd073}.graphic i{font-style:normal;font-weight:800;font-size:13px;letter-spacing:3px;position:absolute;bottom:0;right:0;transform:rotate(11deg);text-align:right;line-height:1.3}.section-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:30px 0 15px;flex-wrap:wrap}.section-head h2{margin:0;font-size:23px;letter-spacing:-.6px}.section-head>span,.muted{color:#66705f;font-size:14px}.lesson{display:flex;gap:25px;align-items:center;padding:22px 0;border-top:1px solid #dadfd0}.lesson-time{display:grid;min-width:100px}.lesson-time strong{font-size:26px;letter-spacing:-.6px}.lesson-time>span{color:#6a7362;font-size:13px}.lesson-copy{flex:1;min-width:0}.lesson h3{margin:7px 0 2px;font-size:17px}.lesson p{margin:0;color:#66705f;font-size:13px}.lesson .changed{color:#6c4c17;margin-top:5px}.lesson.cancelled h3{text-decoration:line-through}.tag{display:inline-block;border-radius:5px;font-size:11px;font-weight:650;padding:3px 8px;background:#e7ebdf;color:#45583a;line-height:1.5}.tag.moved{background:#f5e5c5;color:#765016}.tag.cancelled{background:#f0ddda;color:#853c31}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.panel{padding:24px;border:1px solid #dce0d2;border-radius:17px;background:#fcfcf8;margin-bottom:18px;min-width:0}.panel h3{font-size:18px;line-height:1.3;margin:10px 0}.panel p{font-size:14px;color:#606c56}.panel .quiet{margin-top:4px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px}.event{padding:0;overflow:hidden;display:flex;flex-direction:column}.poster{padding:24px;background:#c8d49e;aspect-ratio:1.6;display:flex;align-items:center;line-height:.95;font-size:40px;font-weight:900;letter-spacing:-2px;overflow:hidden}.poster-1{background:#e8ccac}.poster-2{background:#d0d8e6}.event-body{padding:22px;display:flex;flex-direction:column;align-items:flex-start;flex:1}.event-body .secondary{margin-top:auto}.event-body p{margin:5px 0 14px}.material-mark{height:90px;color:#526736;font-size:52px;letter-spacing:-3px;font-weight:700}.material .secondary{margin-top:12px}.small{font-size:12px!important}.empty{text-align:center;border:1px dashed #c9d0bf;border-radius:16px;padding:35px 20px;margin:20px 0}.empty>span{font-size:30px}.empty p{color:#65705b;font-size:14px}.panel .event-error{padding:12px 16px;border-left:3px solid #853c31;background:#f4e8e3;color:#702d25;font-size:14px}.notice{color:#385222;font-size:14px}.notice:not(:empty){padding:12px 16px;background:#e8efdc;border-radius:10px;margin-bottom:16px}form{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;align-items:end}textarea{resize:vertical;width:100%}.event-full{grid-column:1/-1}form>.primary{justify-self:start;grid-column:1/-1}.attendance-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid #e0e4d8}.attendance-row>select{max-width:230px}.audit{padding-left:20px;font-size:14px}.audit li{margin:12px 0}.audit span{color:#68715f}footer{font-size:12px;color:#64705a;margin-top:35px;padding-top:20px;border-top:1px solid #dadfd0}.overlay{position:fixed;inset:0;background:#101a12a8;display:flex;align-items:center;justify-content:center;padding:20px;z-index:10}.modal{position:relative;background:#f8f9f1;border-radius:20px;max-width:520px;width:100%;padding:34px;max-height:90dvh;overflow:auto}.modal h2{font-size:26px;line-height:1.2;padding-right:30px;letter-spacing:-.7px}.modal p{font-size:15px;color:#526146}.modal>.secondary{display:block;margin-top:22px}.close{position:absolute;right:22px;top:12px;font-size:30px;width:44px;padding:0}@media(max-width:1100px){.workspace{padding:26px}.shell{grid-template-columns:190px minmax(0,1fr)}aside{padding:30px 16px}header{align-items:flex-start;flex-direction:column}.selectors{width:100%}.selectors label{flex:1}.hero{padding:30px}.hero h2{font-size:36px}}@media(max-width:700px){.shell{display:block}aside{border-right:0;padding:18px 16px 12px}.brand{font-size:34px}.brand span{font-size:9px}nav{display:flex;flex-wrap:wrap;margin-top:18px;gap:3px}nav button{padding:8px 10px;gap:6px;font-size:13px;flex:1;justify-content:center}nav span{display:none}.side-note{display:none}.reset{position:absolute;right:16px;top:57px;font-size:12px}.workspace{padding:20px 16px}header{margin-bottom:18px;gap:12px}h1{font-size:28px}.selectors{gap:8px}.selectors label{font-size:11px}.selectors select{font-size:13px;min-width:0;width:100%}.hero{padding:26px 24px;grid-template-columns:1fr}.hero h2{font-size:38px}.hero .graphic{display:none}.hero p{font-size:14px}.two{grid-template-columns:1fr;gap:0}.lesson{gap:14px;flex-wrap:wrap}.lesson-time{min-width:75px}.lesson-time strong{font-size:23px}.lesson-copy{flex-basis:calc(100% - 100px)}.lesson>.quiet{margin-left:89px}.section-head h2{font-size:21px}.panel{padding:20px}form{grid-template-columns:1fr}.modal{padding:25px}.demo-banner{font-size:11px}.cards{grid-template-columns:1fr}.poster{aspect-ratio:2.4}.attendance-row>select{max-width:190px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s ease}button:hover:not(:disabled){filter:brightness(.94)}}
+.timing-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0 12px}
+#timing-search,#timing-collective{font-size:16px;width:100%;min-width:0}
+.timing-row{display:grid;grid-template-columns:minmax(0,90px) minmax(0,1fr);gap:16px;align-items:start}
+.timing-next{border:2px solid #526a31;background:#eef4de}
+.timing-label{background:#26372c;color:#fff}
+.timing-time{min-width:0;color:#46563a}.timing-time strong{font-size:24px;line-height:1.3}.timing-time span{font-size:14px}.timing-time .timing-stage-label{display:block;font-size:12px;line-height:1.25;margin-bottom:5px}
+.timing-copy{min-width:0;overflow-wrap:anywhere}.timing-copy h3{margin:8px 0}.timing-copy p{margin:6px 0}
+.timing-meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:#59644f}
+.timing-logistics{grid-column:1/-1;min-width:0;background:#f8faf2;border:1px solid #d6dfcb;border-radius:12px;padding:14px}
+.timing-logistics h4{margin:0 0 8px;font-size:16px}
+.timing-logistics dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;margin:0}
+.timing-logistics dl div{min-width:0;overflow-wrap:anywhere}
+.timing-logistics dt{font-size:13px;color:#46563a}
+.timing-logistics dd{margin:0;font-weight:650}
+.timing-logistics .pickup-note{margin:12px 0 0;overflow-wrap:anywhere}
+.timing-demo-control{margin-top:12px;min-height:44px;max-width:100%;white-space:normal;text-align:left}
+@media(max-width:420px){.timing-logistics dl{grid-template-columns:1fr}}
+.timing-choice{margin:5px 8px 5px 0;white-space:normal}
+@media(max-width:700px){.timing-controls{grid-template-columns:1fr}.timing-row{grid-template-columns:minmax(0,75px) minmax(0,1fr);gap:12px;padding:16px}.timing-time strong{font-size:21px}}
+
+.studio-schedule h2{margin-top:0}.studio-schedule .studio-location{margin:22px 0;border-top:1px solid #d9dccf;padding-top:10px}.studio-schedule .studio-location h3,.studio-schedule h4{margin:8px 0 2px}.studio-day ul{padding:0;margin:0;list-style:none}.studio-day li{display:grid;grid-template-columns:minmax(88px,8em) minmax(0,1fr);gap:8px;border-bottom:1px solid #e4e6dc;padding:6px 0}.studio-day li strong{font-variant-numeric:tabular-nums;white-space:nowrap}.studio-day li span{overflow-wrap:anywhere}.demo-schedule{margin-top:18px}.demo-schedule summary{cursor:pointer;padding:10px;color:#46563a;font-weight:700}.demo-schedule .section-head{margin-top:18px}.brand{align-items:center;gap:8px;font-size:inherit;letter-spacing:normal}.brand svg{width:44px;height:44px;flex:0 0 auto;color:#26372c}.brand span{font-size:16px;line-height:1.1;letter-spacing:0;max-width:9ch}.graphic svg{display:block;width:min(100%,260px);height:auto;color:#26372c}.studio-brand{box-sizing:border-box;display:flex;align-items:center;justify-content:center;align-self:flex-start;width:min(100%,160px);padding:11px 13px;border-radius:15px;background:#17241c;line-height:1}.studio-brand img{display:block;width:100%;height:auto;max-height:86px;object-fit:contain}.studio-brand:hover{background:#213127}@media(max-width:700px){.studio-brand{width:min(42vw,142px);flex:0 0 auto;padding:8px 10px;border-radius:12px}.studio-brand img{max-height:69px}}</style></head><body><div id="app"></div><noscript>Для демонстрации приложения включите JavaScript. Все данные вымышлены.</noscript><script>"use strict";
+function createZnsModel(deviceStorage=null, requireStorage=false) {
+  const seed = {
+    lessons: [
+      {id:"l1",group:"a",date:"2030-04-08",time:"17:00",original:"16:00",status:"moved",title:"Ритм и движение",room:"Демо-зал А"},
+      {id:"l2",group:"b",date:"2030-04-08",time:"18:30",original:"",status:"active",title:"Командная хореография",room:"Демо-зал Б"},
+      {id:"l3",group:"a",date:"2030-04-10",time:"17:00",original:"",status:"active",title:"Работа в паре",room:"Демо-зал А"},
+      {id:"l4",group:"b",date:"2030-04-11",time:"18:30",original:"",status:"cancelled",title:"Командная хореография",room:"Демо-зал Б"},
+      {id:"l5",group:"a",date:"2030-04-12",time:"17:00",original:"",status:"active",title:"Музыкальность",room:"Демо-зал А"}
+    ],
+    events:[
+      {id:"e1",group:"all",title:"Демо-баттл студии",date:"2030-04-20",type:"Событие",status:"Условия уточняются",text:"Вымышленный пример карточки. Место, категории и регистрация будут показаны после подтверждения организатором."},
+      {id:"e2",group:"a",title:"Открытая репетиция",date:"2030-04-27",type:"Студия",status:"Демонстрационный план",text:"Пример встречи группы А. Можно отметить интерес внутри макета — это не запись на настоящее мероприятие."},
+      {id:"e3",group:"all",title:"Обмен хореографией",date:"",type:"Международный проект",status:"Идея проекта",text:"Взрослые координаторы согласуют формат, язык и права на материалы. Контактов и списков детей здесь нет."}
+    ],
+    news:[
+      {id:"n1",group:"all",title:"Проверьте изменения перед занятием",date:"2030-04-08",important:true,text:"Демонстрационное сообщение. Перед вымышленным занятием проверьте время и статус в расписании макета. Это не объявление о реальном переносе в студии.",destination:"schedule"},
+      {id:"n2",group:"a",title:"Материал к следующей репетиции",date:"2030-04-07",important:true,text:"Вымышленный анонс для группы А: в разделе материалов есть учебный образец. Реальные видео и задания студии не подключены.",destination:"materials"},
+      {id:"n3",group:"b",title:"Что взять на открытую репетицию",date:"2030-04-06",important:false,text:"Это демонстрационная новость для группы Б. Описание формы и подготовки к настоящему мероприятию появится только после подтверждения организатором.",destination:"events"}
+    ],
+    materials:[
+      {id:"m1",group:"a",rightsConfirmed:true,blocked:false,title:"Как работать с музыкой",type:"Памятка",duration:"3 мин чтения",body:"Демонстрационный учебный материал, созданный для макета. На занятии обсудите с преподавателем, где в музыкальном фрагменте начинается новая фраза. Здесь в будущем будет разрешённый материал вашей группы."},
+      {id:"m2",group:"b",rightsConfirmed:true,blocked:false,title:"Подготовка к репетиции",type:"Чек-лист",duration:"2 мин чтения",body:"Вымышленный пример: уточнить время и место в расписании, проверить сообщение преподавателя, подготовить согласованную форму. Это не инструкция к реальному событию студии."},
+      {id:"m3",group:"a",rightsConfirmed:false,title:"Видео с репетиции",type:"Видео",duration:"Доступ не согласован",blocked:true,body:""}
+    ]
+  };
+  let state;
+  const journalKey="zns-demo-timing-lab-journal-v1"+(typeof location==="object"&&location.protocol!=="file:"?":"+new URL(".",location.href).pathname:"");
+  let savedRaw=null,journalStatus={mode:deviceStorage?"ready":requireStorage?"unavailable":"memory",code:deviceStorage?"":"unavailable",restored:false};
+  function journalFailure(code){journalStatus={...journalStatus,mode:"blocked",code};return Error({unavailable:"Сохранение в браузере недоступно. Отметка не изменена.",read:"Не удалось прочитать сохранённый журнал. Отметки заблокированы.",invalid:"Сохранённый демо-журнал не распознан. Отметки заблокированы; исходная запись не удалена.",conflict:"Журнал изменён в другой вкладке. Перезагрузите страницу перед исправлениями.",write:"Не удалось записать журнал в браузере. Отметка не изменена.",verify:"Не удалось подтвердить запись. Перезагрузите страницу и проверьте журнал.",reset:"Не удалось подтвердить очистку журнала. Перезагрузите страницу и проверьте данные."}[code]||"Сохранение журнала недоступно. Отметка не изменена.");}
+  function decodeJournal(raw){
+    const data=JSON.parse(raw),statuses=["unknown","present","absent"],pupils=["У01","У02","У03"],ids=seed.lessons.map(l=>l.id);
+    if(!data||typeof data!=="object"||Array.isArray(data)||data.version!==1||data.dataset!=="zns-demo-april2030-v1"||Object.keys(data).sort().join(",")!=="changes,dataset,marks,version"||!data.marks||typeof data.marks!=="object"||Array.isArray(data.marks)||!Array.isArray(data.changes))throw Error("schema");
+    for(const [key,value] of Object.entries(data.marks)){const parts=key.split(":");if(parts.length!==2||!ids.includes(parts[0])||!pupils.includes(parts[1])||!["present","absent"].includes(value))throw Error("mark");}
+    const replay={};
+    for(let i=data.changes.length-1;i>=0;i--){
+      const item=data.changes[i];
+      if(!item||typeof item!=="object"||Array.isArray(item)||Object.keys(item).sort().join(",")!=="after,before,by,lessonId,pupil,revision"||!ids.includes(item.lessonId)||!pupils.includes(item.pupil)||!statuses.includes(item.before)||!statuses.includes(item.after)||item.before===item.after||!["teacher","admin"].includes(item.by)||item.revision!==data.changes.length-i)throw Error("change");
+      const key=item.lessonId+":"+item.pupil;if((replay[key]||"unknown")!==item.before)throw Error("history");
+      if(item.after==="unknown")delete replay[key];else replay[key]=item.after;
+    }
+    if(Object.keys(replay).length!==Object.keys(data.marks).length||Object.keys(replay).some(key=>replay[key]!==data.marks[key]))throw Error("consistency");
+    return {marks:{...data.marks},changes:data.changes.map(item=>({...item}))};
+  }
+  function loadJournal(){
+    if(!deviceStorage)return;
+    let raw;try{raw=deviceStorage.getItem(journalKey);}catch{journalFailure("read");return;}
+    savedRaw=raw;if(raw===null)return;
+    try{const data=decodeJournal(raw);state.attendance=data.marks;state.attendanceAudit=data.changes;journalStatus={mode:"ready",code:"",restored:true};}catch{journalFailure("invalid");}
+  }
+  function assertJournalCurrent(){
+    if(!deviceStorage){if(requireStorage)throw journalFailure("unavailable");return;}
+    if(journalStatus.mode!=="ready")throw journalFailure(journalStatus.code||"unavailable");
+    let current;try{current=deviceStorage.getItem(journalKey);}catch{throw journalFailure("read");}
+    if(current!==savedRaw)throw journalFailure("conflict");
+  }
+  function saveJournal(marks,changes){
+    assertJournalCurrent();if(!deviceStorage)return;
+    const raw=JSON.stringify({version:1,dataset:"zns-demo-april2030-v1",marks,changes});
+    try{deviceStorage.setItem(journalKey,raw);}catch{throw journalFailure("write");}
+    let confirmed;try{confirmed=deviceStorage.getItem(journalKey);}catch{throw journalFailure("verify");}
+    if(confirmed!==raw)throw journalFailure("verify");
+    savedRaw=raw;journalStatus={...journalStatus,mode:"ready",code:""};
+  }
+  function clearJournal(){
+    if(!deviceStorage){if(requireStorage)throw journalFailure("unavailable");return;}
+    try{deviceStorage.removeItem(journalKey);if(deviceStorage.getItem(journalKey)!==null)throw Error("not removed");}catch{throw journalFailure("reset");}
+    savedRaw=null;journalStatus={mode:"ready",code:"",restored:false};
+  }
+  const access={family:["a","b"],teacher:["a"],admin:["a","b","c"]};
+  function reset(clearSaved=true){if(clearSaved)clearJournal();state={role:"family",group:"all",page:"today",lessons:seed.lessons.map(l=>({...l})),interested:[],read:[],newsRead:{family:[],teacher:[],admin:[]},events:seed.events.map(e=>({...e})),eventAudit:[],materials:seed.materials.map(m=>({...m})),materialAudit:[],audit:[],undo:[],attendance:{},attendanceAudit:[],revision:0};}
+  function allowed(){return access[state.role];}
+  function visible(group){return (group==="all"||allowed().includes(group))&&(state.group==="all"||group==="all"||state.group===group);}
+  function selectRole(role){if(!access[role])throw Error("Неизвестная роль");state.role=role;if(state.group!=="all"&&!allowed().includes(state.group))state.group="all";if(state.page==="manage"&&role==="family")state.page="today";}
+  function selectGroup(group){if(group!=="all"&&!allowed().includes(group))throw Error("Группа недоступна");state.group=group;}
+  function navigate(page){if(!["today","schedule","events","materials","timing","manage"].includes(page))throw Error("Неизвестный экран");if(page==="manage"&&state.role==="family")throw Error("Экран только для сотрудника");state.page=page;}
+  function lessons(){return state.lessons.filter(l=>visible(l.group)).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));}
+  function events(){return state.events.filter(e=>visible(e.group));}
+  function news(){return seed.news.filter(n=>visible(n.group)).sort((a,b)=>Number(b.important)-Number(a.important)||b.date.localeCompare(a.date));}
+  function newsItem(id){const item=news().find(n=>n.id===id);if(!item)throw Error("Новость недоступна");return item;}
+  function isNewsRead(id){newsItem(id);return state.newsRead[state.role].includes(id);}
+  function setNewsRead(id,read){
+    newsItem(id);if(typeof read!=="boolean")throw Error("Неверная отметка новости");
+    const current=state.newsRead[state.role],wasRead=current.includes(id);if(wasRead===read)return false;
+    state.newsRead[state.role]=read?[...current,id]:current.filter(item=>item!==id);return true;
+  }
+  function unreadNewsCount(){return news().filter(n=>!state.newsRead[state.role].includes(n.id)).length;}
+  function materials(){return state.materials.filter(m=>visible(m.group));}
+  function material(id){const item=materials().find(m=>m.id===id);if(!item||item.blocked)throw Error("Материал недоступен");if(!state.read.includes(id))state.read.push(id);return item;}
+  function setMaterialAvailability(id,enabled){
+    if(state.role!=="admin")throw Error("Менять доступ к материалам может администратор");
+    if(typeof enabled!=="boolean")throw Error("Неверное состояние доступа");
+    const m=materials().find(item=>item.id===id);
+    if(!m)throw Error("Материал недоступен");
+    if(enabled&&!m.rightsConfirmed)throw Error("Права на материал не подтверждены");
+    const blocked=!enabled;if(m.blocked===blocked)return false;
+    const before=m.blocked;m.blocked=blocked;
+    state.materialAudit.unshift({id:m.id,beforeBlocked:before,afterBlocked:blocked,revision:state.materialAudit.length+1});
+    return true;
+  }
+  function invalidEvent(message,field){const error=new Error(message);error.field=field;return error;}
+  function updateEvent(id,input){
+    if(state.role!=="admin")throw Error("Менять события может администратор");
+    const event=events().find(e=>e.id===id);if(!event)throw Error("Событие недоступно");
+    const keys=["title","date","text","status"];
+    if(!input||typeof input!=="object"||Object.keys(input).some(k=>!keys.includes(k))||keys.some(k=>typeof input[k]!=="string"))throw Error("Неверные поля события");
+    const next={title:input.title.trim(),date:input.date.trim(),text:input.text.trim(),status:input.status};
+    if(!next.title||next.title.length>80)throw invalidEvent("Заголовок: от 1 до 80 символов","title");
+    if(!next.text||next.text.length>1000)throw invalidEvent("Описание: от 1 до 1000 символов","text");
+    if(!["Условия уточняются","Демонстрационный план","Идея проекта","Отменено"].includes(next.status))throw invalidEvent("Неверный статус события","status");
+    if(next.date){if(!/^\d{4}-\d{2}-\d{2}$/.test(next.date))throw invalidEvent("Неверная дата события","date");const d=new Date(next.date+"T12:00:00Z");if(Number.isNaN(d.getTime())||d.toISOString().slice(0,10)!==next.date)throw invalidEvent("Неверная дата события","date");}
+    const before={title:event.title,date:event.date,text:event.text,status:event.status};
+    if(keys.every(k=>before[k]===next[k]))return false;
+    Object.assign(event,next);
+    if(next.status==="Отменено")state.interested=state.interested.filter(item=>item!==event.id);
+    state.eventAudit.unshift({id:event.id,before,after:{...next},revision:state.eventAudit.length+1});
+    return true;
+  }
+  function toggleInterest(id){const event=events().find(e=>e.id===id);if(!event)throw Error("Событие недоступно");if(event.status==="Отменено")throw Error("Событие отменено");state.interested=state.interested.includes(id)?state.interested.filter(i=>i!==id):[...state.interested,id];}
+  function updateLesson(id,time,status){if(state.role!=="admin")throw Error("Менять расписание может администратор");const l=state.lessons.find(x=>x.id===id&&visible(x.group));if(!l)throw Error("Занятие недоступно");if(!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(time))throw Error("Укажите время в формате ЧЧ:ММ");if(!["active","cancelled"].includes(status))throw Error("Неверный статус");const before={time:l.time,status:l.status,original:l.original};if(time===l.time&&((status==="active"&&l.status!=="cancelled")||status===l.status))return false;
+    l.original=l.original||(time!==l.time?l.time:"");l.time=time;l.status=status==="cancelled"?"cancelled":l.original&&l.original!==time?"moved":"active";
+    state.undo.push({id:l.id,before:{...before}});state.revision++;state.audit.unshift({id:l.id,before,after:{time:l.time,status:l.status,original:l.original},revision:state.revision,kind:"change"});return true;
+  }
+  function canUndo(){return state.role==="admin"&&state.undo.some(entry=>state.lessons.some(l=>l.id===entry.id&&visible(l.group)));}
+  function undoLastChange(){
+    if(state.role!=="admin")throw Error("Отменять изменения может администратор");
+    let index=-1;
+    for(let i=state.undo.length-1;i>=0;i--){if(state.lessons.some(l=>l.id===state.undo[i].id&&visible(l.group))){index=i;break;}}
+    if(index===-1)return false;
+    const entry=state.undo[index],l=state.lessons.find(l=>l.id===entry.id);
+    const before={time:l.time,status:l.status,original:l.original};
+    Object.assign(l,entry.before);state.undo.splice(index,1);state.revision++;
+    state.audit.unshift({id:l.id,before,after:{time:l.time,status:l.status,original:l.original},revision:state.revision,kind:"undo"});
+    return true;
+  }
+  const timingClock="2030-04-20T14:05:00+03:00";
+  const timingTeams=[{id:"alpha",group:"a",name:"Демо-коллектив Альфа"},{id:"beta",group:"b",name:"Демо-коллектив Бета"}];
+  const timingEntries=[
+    {id:"a3",team:"alpha",title:"Демо-номер «Импульс»",startAt:"2030-04-20T15:10:00+03:00",stage:"Сцена А · демо",published:false,score:99,video:"not_added"},
+    {id:"b1",team:"beta",title:"Демо-номер «Начало»",startAt:"2030-04-20T13:50:00+03:00",stage:"Сцена Б · демо",published:true,score:0,video:"available"},
+    {id:"a4",team:"alpha",title:"Демо-номер «Финал»",startAt:null,stage:"Сцена уточняется",published:false,score:null,video:"not_added",logistics:{meetupTime:"12:20",meetupPlace:"Демо-холл «Север», стойка A",blockStart:"13:15",order:7,pickupNote:"Заберите участника у стойки A · демо."},demoStageStart:"2030-04-20T14:35:00+03:00"},
+    {id:"a1",team:"alpha",title:"Демо-номер «Вектор»",startAt:"2030-04-20T13:40:00+03:00",stage:"Сцена А · демо",published:true,score:86.5,video:"available"},
+    {id:"b2",team:"beta",title:"Демо-номер «Орбита»",startAt:"2030-04-20T14:15:00+03:00",stage:"Сцена Б · демо",published:false,score:91,video:"not_added"},
+    {id:"a2",team:"alpha",title:"Демо-номер «Пульс»",startAt:"2030-04-20T14:20:00+03:00",stage:"Сцена А · демо",published:false,score:null,video:"not_added"},
+    {id:"b3",team:"beta",title:"Демо-номер «Эхо»",startAt:null,stage:"Сцена уточняется",published:false,score:null,video:"not_added"}
+  ];
+  function timingNormalize(query){if(typeof query!=="string")throw Error("Введите название коллектива");return query.normalize("NFKC").toLowerCase().replace(/ё/g,"е").trim().replace(/\s+/g," ");}
+  function timingCollectives(query=""){const q=timingNormalize(query);return timingTeams.filter(team=>visible(team.group)&&(!q||timingNormalize(team.name).includes(q))).map(team=>({...team}));}
+  function timingSchedule(teamId,clock=timingClock,showDemoStageTime=false){
+    const team=timingCollectives().find(t=>t.id===teamId);if(!team)throw Error("Коллектив недоступен");
+    const now=Date.parse(clock);if(!Number.isFinite(now))throw Error("Неверное демонстрационное время");
+    const entries=timingEntries.filter(row=>row.team===teamId).map(row=>showDemoStageTime&&row.demoStageStart?{...row,startAt:row.demoStageStart}:row).sort((a,b)=>{
+      const x=a.startAt?Date.parse(a.startAt):Infinity,y=b.startAt?Date.parse(b.startAt):Infinity;
+      return x===y?a.id.localeCompare(b.id):x-y;
+    });
+    const next=entries.find(row=>row.startAt&&Date.parse(row.startAt)>=now)?.id||null;
+    return {team:{...team},clock,nextId:next,rows:entries.map(row=>({
+      id:row.id,teamId:row.team,title:row.title,startAt:row.startAt,stage:row.stage,
+      isNext:row.id===next,isPast:Boolean(row.startAt&&Date.parse(row.startAt)<now),
+      resultPublished:row.published,score:row.published&&typeof row.score==="number"&&Number.isFinite(row.score)?row.score:null,
+      video:row.video==="available"?"available":"not_added",
+      logistics:row.logistics?{...row.logistics}:null,canDemoStageTime:Boolean(row.demoStageStart)
+    }))};
+  }
+  function attendance(id,pupil,status){if(!["teacher","admin"].includes(state.role))throw Error("Только сотрудник");if(!lessons().some(l=>l.id===id&&l.status!=="cancelled"))throw Error("Занятие недоступно или отменено");if(!["У01","У02","У03"].includes(pupil)||!["unknown","present","absent"].includes(status))throw Error("Неверная отметка");const key=id+":"+pupil,before=state.attendance[key]||"unknown";if(before===status){assertJournalCurrent();return false;}
+    const marks={...state.attendance};
+    if(status==="unknown")delete marks[key];else marks[key]=status;
+    const changes=[{lessonId:id,pupil,before,after:status,by:state.role,revision:state.attendanceAudit.length+1},...state.attendanceAudit];
+    saveJournal(marks,changes);state.attendance=marks;state.attendanceAudit=changes;return true;}
+  function attendanceLesson(id){if(!["teacher","admin"].includes(state.role))throw Error("Только сотрудник");const l=lessons().find(l=>l.id===id);if(!l)throw Error("Занятие недоступно");return l;}
+  function attendanceSummary(id){attendanceLesson(id);const result={total:3,present:0,absent:0,unknown:0};for(const pupil of ["У01","У02","У03"])result[state.attendance[id+":"+pupil]||"unknown"]++;return result;}
+  function attendanceChanges(id){attendanceLesson(id);return state.attendanceAudit.filter(entry=>entry.lessonId===id).map(entry=>({...entry}));}
+  reset(false);loadJournal();
+  return {get state(){return state;},get attendanceStorage(){return {...journalStatus};},timingNormalize,timingCollectives,timingSchedule,allowed,visible,selectRole,selectGroup,navigate,lessons,events,news,newsItem,isNewsRead,setNewsRead,unreadNewsCount,materials,material,setMaterialAvailability,updateEvent,toggleInterest,updateLesson,canUndo,undoLastChange,attendance,attendanceSummary,attendanceChanges,reset};
+}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+let journalDeviceStorage=null;
+try{journalDeviceStorage=document.defaultView?.localStorage||null;}catch{}
+const model=createZnsModel(journalDeviceStorage,true);
+const app=document.getElementById("app");
+const groups={a:"Группа А · демо",b:"Группа Б · демо",c:"Группа В · демо"};
+const pages={today:"Сегодня",schedule:"Расписание",events:"События",materials:"Материалы",timing:"Мой тайминг",manage:"Управление"};
+const statusText={active:"По плану",moved:"Перенос",cancelled:"Отменено"};
+let detail=null;let notice="";let selectedLessonId=null;let selectedAttendanceId=null;let selectedEventId=null;let eventDraft=null;let eventValidation=null;let timingQuery="";let selectedTimingTeam="";let showDemoStageTime=false;
+const fmt=date=>date?new Intl.DateTimeFormat("ru",{day:"numeric",month:"long",timeZone:"UTC"}).format(new Date(date+"T12:00:00Z")):"Сроки уточняются";
+const tag=(text,cls="")=>'<span class="tag '+cls+'">'+escapeHtml(text)+'</span>';
+function empty(text){return '<div class="empty"><span aria-hidden="true">↗</span><h3>Здесь пока ничего нет</h3><p>'+escapeHtml(text)+'</p></div>';}
+function lessonCard(l){return '<article class="lesson '+(l.status==="cancelled"?"cancelled":"")+'"><div class="lesson-time"><strong>'+escapeHtml(l.time)+'</strong><span>'+fmt(l.date)+'</span></div><div class="lesson-copy">'+tag(statusText[l.status],l.status)+'<h3>'+escapeHtml(l.title)+'</h3><p>'+escapeHtml(groups[l.group])+' · '+escapeHtml(l.room)+'</p>'+(l.original&&l.original!==l.time?'<p class="changed">Было '+escapeHtml(l.original)+' → теперь '+escapeHtml(l.time)+'</p>':'')+'</div><button class="quiet" data-action="lesson" data-id="'+l.id+'" aria-label="Подробнее: '+escapeHtml(l.title)+'">Подробнее ↗</button></article>';}
+function newsCards(){
+ const list=model.news();return '<div class="section-head"><h2>Новости ваших групп</h2>'+tag('Непрочитано: '+model.unreadNewsCount())+'</div><p class="muted">Демонстрационные сообщения. Здесь нет рассылки или подтверждения доставки.</p>'+(list.length?'<div class="cards">'+list.map(n=>'<article class="panel news-card">'+tag(n.important?'Важное · демо':'Новость · демо')+'<h3>'+escapeHtml(n.title)+'</h3><p>'+escapeHtml(n.group==="all"?"Все группы · демо":groups[n.group])+' · '+fmt(n.date)+'</p><p class="small">'+(model.isNewsRead(n.id)?'Прочитано в макете':'Не прочитано')+'</p><button class="secondary" data-action="news" data-id="'+n.id+'">Прочитать ↗</button></article>').join("")+'</div>':empty("Для выбранной группы нет новостей."));
+}
+function timingLogisticsHtml(row){
+ const data=row.logistics;if(!data)return "";
+ const field=(label,value)=>value?'<div><dt>'+label+'</dt><dd>'+escapeHtml(String(value))+'</dd></div>':"";
+ const details=field("Время сбора",data.meetupTime)+field("Место сбора",data.meetupPlace)+field("Начало блока",data.blockStart)+field("Порядок выхода",data.order?String(data.order)+"-й в блоке":"");
+ const note=data.pickupNote?.trim();
+ if(!details&&!note)return "";
+ return '<section class="timing-logistics" aria-label="Сбор и порядок выхода"><h4>Сбор и порядок выхода</h4>'+(details?'<dl>'+details+'</dl>':"")+(note?'<p class="pickup-note"><strong>После выступления:</strong> '+escapeHtml(note)+'</p>':"")+(row.canDemoStageTime?'<button id="timing-demo-scenario" type="button" class="secondary timing-demo-control" data-action="timing-demo-stage" aria-pressed="'+showDemoStageTime+'">Показать пример уточнения времени</button>':"")+'</section>';
+}
+function timingResultsHtml(){
+ const all=model.timingCollectives();if(!all.length)return empty("Для выбранной группы нет демонстрационного коллектива.");
+ let teamId=selectedTimingTeam;
+ if(teamId&&!all.some(t=>t.id===teamId))teamId="";
+ if(!teamId){
+  if(!model.timingNormalize(timingQuery))return '<div class="empty"><h3>Выберите свой коллектив</h3><p>Введите название или выберите коллектив из списка. Здесь появятся только его выступления.</p></div>';
+  const matches=model.timingCollectives(timingQuery);
+  if(!matches.length)return '<div class="empty"><h3>Коллектив не найден</h3><p>Проверьте название или выберите коллектив из списка.</p></div>';
+  if(matches.length>1)return '<div class="panel"><h3>Найдено коллективов: '+matches.length+'</h3><p>Выберите один, чтобы открыть персональный тайминг.</p>'+matches.map(t=>'<button class="secondary timing-choice" data-action="timing-pick" data-id="'+t.id+'">'+escapeHtml(t.name)+'</button>').join("")+'</div>';
+  teamId=matches[0].id;
+ }
+ const data=model.timingSchedule(teamId,undefined,showDemoStageTime);
+ return '<div class="section-head"><h2>'+escapeHtml(data.team.name)+'</h2>'+tag('Выступлений: '+data.rows.length)+'</div>'+(!data.nextId?'<p class="muted">Ближайший выход пока не определён. Проверьте время, которое уточняется.</p>':'')+data.rows.map(row=>{
+  const time=row.startAt?new Intl.DateTimeFormat("ru",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/Moscow"}).format(new Date(row.startAt)):"";
+  const result=row.resultPublished&&row.score!==null?'Баллы: '+row.score.toLocaleString("ru",{maximumFractionDigits:1})+' · демо':row.resultPublished?'Баллы уточняются':'Результаты не опубликованы';
+  return '<article class="panel timing-row '+(row.isNext?'timing-next':'')+'" data-timing-id="'+row.id+'"><div class="timing-time"><span class="timing-stage-label">Выход на сцену</span>'+(time?'<strong>'+time+'</strong>':'<span>Время уточняется</span>')+'</div><div class="timing-copy">'+(row.isNext?tag("Ближайший выход","timing-label"):row.isPast?tag("Время выхода прошло"):tag(row.startAt?"Предстоящий выход":"Время не подтверждено"))+'<h3>'+escapeHtml(row.title)+'</h3><p>'+escapeHtml(row.stage)+'</p><div class="timing-meta"><span>'+escapeHtml(result)+'</span><span>Видео: '+(row.video==="available"?'доступно · демо':'не добавлено')+'</span></div></div>'+timingLogisticsHtml(row)+'</article>';
+ }).join("");
+}
+function timingView(){
+ const teams=model.timingCollectives();if(selectedTimingTeam&&!teams.some(t=>t.id===selectedTimingTeam))selectedTimingTeam="";
+ return '<div class="section-head"><h2>Ваши выходы — в одном месте</h2>'+tag("Тестовая функция")+'</div><p class="muted">Демо: 20 апреля 2030, 14:05 · Москва, UTC+3. Время фиксировано для проверки ближайшего выхода.</p><div class="timing-controls"><label>Найти коллектив<input id="timing-search" type="search" autocomplete="off" placeholder="Например, Альфа" value="'+escapeHtml(timingQuery)+'"></label><label>Или выбрать из списка<select id="timing-collective"><option value="">Выберите коллектив</option>'+teams.map(t=>'<option value="'+t.id+'" '+(selectedTimingTeam===t.id?'selected':'')+'>'+escapeHtml(t.name)+'</option>').join("")+'</select></label></div><p class="small">Все коллективы, номера, баллы и статусы видео вымышлены. Видеофайлы и внешние ссылки не подключены.</p><section id="timing-results" aria-live="polite">'+timingResultsHtml()+'</section>';
+}
+function updateTimingResults(){const select=document.getElementById("timing-collective");if(select)select.value=selectedTimingTeam;const results=document.getElementById("timing-results");if(results)results.innerHTML=timingResultsHtml();}
+function chooseTimingTeam(id){model.timingSchedule(id);selectedTimingTeam=id;timingQuery="";const input=document.getElementById("timing-search");if(input)input.value="";updateTimingResults();const select=document.getElementById("timing-collective");if(select)select.focus();}
+function today(){
+ const list=model.lessons().filter(l=>l.date==="2030-04-08");const changes=model.lessons().filter(l=>l.status!=="active");
+ return '<div class="hero"><div><span class="eyebrow">ВАШ РИТМ НА СЕГОДНЯ</span><h2>Всё начинается<br>с движения.</h2><p>Занятия, важные изменения и жизнь вашей группы — рядом.</p><button class="primary" data-action="nav" data-page="schedule">Моё расписание ↗</button></div><div class="graphic" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true" focusable="false"><circle cx="56" cy="24" r="8" fill="currentColor"/><path d="M24 40l24 4 13-7 18 5M57 39l-8 17-13 19-16 8m29-27 14 12 16 10" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div><div class="section-head"><h2>Ближайшие занятия</h2><span>Демо-день · 8 апреля 2030</span></div>'+(list.length?list.map(lessonCard).join(""):empty("Для выбранной группы сегодня нет демонстрационных занятий."))+newsCards()+'<div class="two"><section class="panel"><span class="eyebrow">НА ЗАМЕТКУ</span><h3>Изменения в расписании</h3><p>'+(changes.length?changes.length+' изменения. Переносы и отмены всегда видны в карточке занятия.':'В выбранной группе изменений нет.')+'</p><button class="quiet" data-action="nav" data-page="schedule">Проверить изменения →</button></section><section class="panel"><span class="eyebrow">ПЕРВЫЙ ШАГ</span><h3>Пробное занятие</h3><p>Здесь появится переход в действующую запись студии. В макете заявки не отправляются.</p><button class="quiet" data-action="trial">Как будет работать запись →</button></section></div>';
+}
+function schedule(){const list=model.lessons();return "<section class=\"panel studio-schedule\" aria-labelledby=\"studio-schedule-title\"><h2 id=\"studio-schedule-title\">Расписание студии</h2><p class=\"muted\">Регулярные занятия · время московское · сверено 24 ноября 2026.</p><section class=\"studio-location\"><h3>Новопеределкино</h3><p class=\"muted\">Лукинская ул., 9, корп. 1</p><div class=\"studio-day\"><h4>Вторник и четверг</h4><ul><li><strong>15:00–16:00</strong><span>Starters · 7–11 лет</span></li><li><strong>16:00–17:00</strong><span>Kids</span></li><li><strong>17:00–18:00</strong><span>Юниоры</span></li></ul></div><div class=\"studio-day\"><h4>Суббота</h4><ul><li><strong>10:00–11:00</strong><span>Mama Dance</span></li><li><strong>11:00–12:00</strong><span>Kids</span></li><li><strong>14:00–16:00</strong><span>Юниоры</span></li></ul></div><div class=\"studio-day\"><h4>Воскресенье</h4><ul><li><strong>11:00–12:00</strong><span>Mama Dance</span></li><li><strong>с 12:00</strong><span>Интенсивы · длительность, тема и педагог объявляются отдельно</span></li></ul></div></section><p><a href=\"https://znsdance.ru/#zns-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Актуальные изменения на сайте студии ↗</a></p></section>"+'<details class="demo-schedule"><summary>Тестовые занятия на вымышленных данных</summary>'+'<div class="section-head"><div><span class="eyebrow">ДЕМОНСТРАЦИОННАЯ НЕДЕЛЯ</span><h2>8–14 апреля 2030</h2></div>'+tag('Время: Москва, UTC+3')+'</div><p class="muted">Все занятия и часы вымышлены. В карточках сохраняются исходное время и статус отмены.</p>'+(list.length?list.map(lessonCard).join(""):empty("У этой демонстрационной группы пока нет занятий."))+'</details>';}
+function eventCards(){const list=model.events();return '<div class="section-head"><h2>Сцена и новые встречи</h2>'+tag("Демо-проекты")+'</div><div class="cards">'+list.map((e,i)=>'<article class="event panel"><div class="poster poster-'+i+'" aria-hidden="true"><span>'+["BATTLE","OPEN<br>STUDIO","BEYOND<br>BORDERS"][i%3]+'</span></div><div class="event-body">'+tag(e.type)+'<h3>'+escapeHtml(e.title)+'</h3><p>'+fmt(e.date)+'</p><p class="muted">'+escapeHtml(e.status)+'</p><button class="secondary" data-action="event" data-id="'+e.id+'">О проекте ↗</button></div></article>').join("")+'</div>';}
+function materialCards(){const list=model.materials();return '<div class="section-head"><h2>Продолжайте открывать танец</h2>'+tag("По вашим группам")+'</div><p class="muted">Тексты созданы для макета. Реальные материалы студии и изображения учеников не подключены.</p>'+(list.length?'<div class="cards">'+list.map(m=>'<article class="panel material"><div class="material-mark" aria-hidden="true">'+(m.blocked?'◈':'Aa')+'</div>'+tag(m.type)+'<h3>'+escapeHtml(m.title)+'</h3><p>'+escapeHtml(groups[m.group])+'</p><p class="muted">'+escapeHtml(m.duration)+'</p><button class="secondary" data-action="material" data-id="'+m.id+'" '+(m.blocked?'disabled':'')+'>'+(m.blocked?'Доступ закрыт':model.state.read.includes(m.id)?'Открыть снова ↗':'Читать ↗')+'</button>'+(m.blocked?'<p class="small">'+(m.rightsConfirmed?'Материал временно снят с доступа.':'Права на показ пока не подтверждены.')+'</p>':'')+'</article>').join("")+'</div>':empty("Для выбранной группы нет материалов."));}
+function captureEventDraft(form){
+ if(model.state.role!=="admin"||model.state.page!=="manage")return false;
+ const id=form.elements.event.value,saved=model.events().find(e=>e.id===id);if(!saved)return false;
+ const values={title:form.elements.title.value,date:form.elements.date.value,text:form.elements.text.value,status:form.elements.status.value};
+ const changed=Object.keys(values).some(key=>values[key]!==saved[key]);
+ eventDraft=changed||eventValidation?{id,values}:null;return changed;
+}
+function eventFieldAttributes(field){return eventValidation?.field===field?' aria-invalid="true" aria-describedby="event-error"':'';}
+function eventEditor(){
+ const list=model.events();if(!list.some(e=>e.id===selectedEventId))selectedEventId=list[0]?.id||null;
+ if(eventDraft&&eventDraft.id!==selectedEventId){eventDraft=null;eventValidation=null;}
+ const saved=list.find(e=>e.id===selectedEventId);const event=saved&&eventDraft?.id===saved.id?{...saved,...eventDraft.values}:saved;const pending=Boolean(saved&&eventDraft&&Object.keys(eventDraft.values).some(key=>eventDraft.values[key]!==saved[key]));const audit=model.state.eventAudit.filter(a=>list.some(e=>e.id===a.id));
+ return '<section class="panel"><h3>Изменить демо-событие</h3><p class="muted">Только пример в макете: изменения не публикуются и не рассылаются. Оставьте дату пустой, если она уточняется.</p><p class="small" id="event-draft-note" '+(pending?'':'hidden')+'>Изменения события ещё не сохранены.</p>'+(eventValidation?'<p class="event-error" id="event-error" role="alert">Изменения не сохранены. '+escapeHtml(eventValidation.message)+'</p>':'')+(event?'<form id="event-form"><label>Событие<select id="event-select" name="event">'+list.map(e=>'<option value="'+e.id+'" '+(e.id===selectedEventId?'selected':'')+'>'+escapeHtml(e.title)+'</option>').join("")+'</select></label><label>Дата<input id="event-date" name="date" type="date" '+eventFieldAttributes("date")+' value="'+escapeHtml(event.date)+'"></label><label>Статус<select id="event-status" name="status" '+eventFieldAttributes("status")+'>'+["Условия уточняются","Демонстрационный план","Идея проекта","Отменено"].map(s=>'<option value="'+s+'" '+(event.status===s?'selected':'')+'>'+s+'</option>').join("")+'</select></label><label class="event-full">Название<input id="event-title" name="title" type="text" '+eventFieldAttributes("title")+' required maxlength="80" value="'+escapeHtml(event.title)+'"></label><label class="event-full">Описание<textarea id="event-text" name="text" '+eventFieldAttributes("text")+' required maxlength="1000" rows="4">'+escapeHtml(event.text)+'</textarea></label><button class="primary" id="save-event" type="submit">Сохранить событие в макете</button></form>':empty("Нет событий для изменения."))+'<h3>История событий</h3>'+(audit.length?'<ul>'+audit.map(a=>'<li>'+escapeHtml(a.after.title)+' · '+escapeHtml(a.before.status)+' → '+escapeHtml(a.after.status)+'</li>').join("")+'</ul>':'<p class="muted">Изменений событий пока нет.</p>')+'</section>';
+}
+function materialAccessPanel(){
+ const list=model.materials();const audit=model.state.materialAudit.filter(entry=>list.some(m=>m.id===entry.id));
+ return '<section class="panel"><h3>Доступ к демо-материалам</h3><p class="muted">Только вымышленные примеры. Права на реальные файлы студии здесь не подтверждаются.</p>'+(list.length?list.map(m=>'<div class="panel"><h3>'+escapeHtml(m.title)+'</h3><p>'+escapeHtml(groups[m.group])+' · '+(m.blocked?'Доступ закрыт':'Доступ открыт')+'</p><p class="small">'+(m.rightsConfirmed?'Учебный образец макета.':'Разрешение на материал не подтверждено.')+'</p><button class="secondary" id="material-access-'+m.id+'" data-action="material-access" data-id="'+m.id+'" '+(!m.rightsConfirmed?'disabled':'')+'>'+(m.rightsConfirmed?(m.blocked?'Вернуть доступ':'Снять с доступа'):'Ожидает разрешения')+'</button></div>').join(""):empty("У выбранной группы нет материалов."))+'<h3>История доступа</h3>'+(audit.length?'<ul>'+audit.map(entry=>'<li>'+escapeHtml(list.find(m=>m.id===entry.id).title)+' · '+(entry.afterBlocked?'Снят с доступа':'Доступ восстановлен')+'</li>').join("")+'</ul>':'<p class="muted">Изменений доступа пока нет.</p>')+'</section>';
+}
+function manage(){
+ const list=model.lessons();const active=list.filter(l=>l.status!=="cancelled");const admin=model.state.role==="admin";const audit=model.state.audit.filter(a=>list.some(l=>l.id===a.id));
+ if(!list.some(l=>l.id===selectedLessonId))selectedLessonId=list[0]?.id||null;
+ if(!active.some(l=>l.id===selectedAttendanceId))selectedAttendanceId=active[0]?.id||null;
+ return '<div class="section-head"><h2>'+(admin?'Рабочее место администратора':'Мои группы')+'</h2>'+tag("Тестовые изменения")+'</div><div class="panel intro"><h3>Сначала — существующие процессы</h3><p>В рабочей версии расписание и посещаемость будут связаны с подтверждёнными источниками студии. Расписание и события остаются данными сеанса; демо-журнал сохраняется только в этом браузере при доступном хранилище.</p></div>'+(admin?'<section class="panel"><h3>Изменить занятие</h3>'+(list.length?'<form id="schedule-form"><label>Занятие<select name="lesson">'+list.map(l=>'<option value="'+l.id+'" '+(l.id===selectedLessonId?'selected':'')+'>'+fmt(l.date)+' · '+escapeHtml(l.title)+' · '+escapeHtml(groups[l.group])+' · '+l.time+'</option>').join("")+'</select></label><label>Новое время<input name="time" type="time" required value="'+list[0].time+'"></label><label>Статус<select name="status"><option value="active">Проводится</option><option value="cancelled">Отменено</option></select></label><button class="primary" id="save-lesson" type="submit">Сохранить в макете</button></form>':empty("Нет занятий для редактирования."))+'</section>':'')+'<section class="panel"><h3>Посещаемость · демонстрация</h3><p class="muted">У01–У03 — вымышленные обозначения. Это не журнал студии.</p>'+(active.length?'<label>Занятие<select id="attendance-lesson">'+active.map(l=>'<option value="'+l.id+'" '+(l.id===selectedAttendanceId?'selected':'')+'>'+fmt(l.date)+' · '+escapeHtml(l.title)+'</option>').join("")+'</select></label><div id="attendance-rows"></div>':empty("Нет доступных занятий для отметок."))+'</section>'+ (admin?eventEditor()+materialAccessPanel():'')+'<section class="panel"><h3>История изменений</h3>'+(admin?'<button class="secondary" id="undo-change" data-action="undo" '+(model.canUndo()?'':'disabled')+'>Отменить последнее изменение</button><p class="small">Восстановит предыдущее время и статус в выбранных группах. История сохранится.</p>':'')+''+(audit.length?'<ul class="audit">'+audit.map(a=>'<li>'+(a.kind==='undo'?'Отмена изменения ':'Изменение ')+a.revision+' · '+escapeHtml(model.state.lessons.find(l=>l.id===a.id).title)+'<br><span>'+a.before.time+' / '+statusText[a.before.status]+' → '+a.after.time+' / '+statusText[a.after.status]+'</span></li>').join("")+'</ul>':'<p class="muted">Пока без изменений. Сохранённый перенос появится и в расписании.</p>')+'</section>';
+}
+function journalStorageNotice(){
+ const status=model.attendanceStorage;
+ if(status.mode==="ready")return '<p class="small" id="journal-storage-note">'+(status.restored?'Сохранённый демо-журнал восстановлен. ':'')+'Отметки сохраняются в этом браузере на этом устройстве. Другие устройства не синхронизируются.</p>';
+ return '<p class="event-error" id="journal-storage-error" role="alert">'+({invalid:"Сохранённый журнал не распознан; исходная запись не удалена. Не вводите новые отметки.",conflict:"Журнал изменён в другой вкладке. Перезагрузите страницу.",verify:"Не удалось подтвердить запись. После перезагрузки проверьте журнал.",reset:"Не удалось подтвердить очистку журнала. Перезагрузите страницу и проверьте данные.",write:"Не удалось сохранить отметку. Прежняя отметка оставлена."}[status.code]||"Хранилище браузера недоступно. Изменение отметок заблокировано.")+'</p>';
+}
+function attendanceRows(id){
+ const summary=model.attendanceSummary(id),changes=model.attendanceChanges(id).slice(0,5);
+ const labels={unknown:"Не отмечено",present:"Присутствует",absent:"Отсутствует"};
+ return journalStorageNotice()+'<p class="attendance-summary" role="status" aria-live="polite">Присутствуют: '+summary.present+' · Отсутствуют: '+summary.absent+' · Не отмечены: '+summary.unknown+' · Всего: '+summary.total+'</p>'+["У01","У02","У03"].map(p=>'<label class="attendance-row"><span>'+p+'</span><select '+(model.attendanceStorage.mode==="ready"?'':'disabled ')+'id="attendance-'+id+'-'+p+'" data-attendance="'+p+'" data-lesson="'+id+'" aria-label="Посещаемость '+p+'">'+Object.entries(labels).map(([v,t])=>'<option value="'+v+'" '+((model.state.attendance[id+":"+p]||"unknown")===v?"selected":"")+'>'+t+'</option>').join("")+'</select></label>').join("")+'<h4>Последние изменения отметок</h4><p class="small">Показаны до 5 вымышленных изменений этого занятия в текущем сеансе.</p>'+(changes.length?'<ul class="attendance-history">'+changes.map(entry=>'<li>№'+entry.revision+' · '+escapeHtml(entry.pupil)+' · '+labels[entry.before]+' → '+labels[entry.after]+' · '+(entry.by==="teacher"?'Преподаватель · демо':'Администратор · демо')+'</li>').join("")+'</ul>':'<p class="muted">Отметки этого занятия ещё не менялись.</p>');
+}
+function modalHtml(){
+ if(!detail)return "";
+ let title="",body="",actions="";
+ if(detail.type==="trial"){title="Запись на пробное";body="<p>В первой версии здесь будет переход в существующую форму студии. Сначала уточним, куда поступают заявки и кто отвечает.</p><p>Этот прототип не собирает контакты и не отправляет заявки.</p>";}
+ if(detail.type==="lesson"){const l=model.lessons().find(l=>l.id===detail.id);if(!l)return "";title=l.title;body='<p>'+fmt(l.date)+' · '+l.time+' · Москва, UTC+3</p><p>'+escapeHtml(groups[l.group])+' · '+escapeHtml(l.room)+'</p>'+tag(statusText[l.status],l.status)+(l.original&&l.original!==l.time?'<p>Исходное время: '+l.original+'. Новое время: '+l.time+'.</p>':'')+'<p class="muted">Демонстрационная запись. Источник: вымышленные данные макета.</p>';}
+ if(detail.type==="event"){const e=model.events().find(e=>e.id===detail.id);if(!e)return "";title=e.title;body='<p>'+fmt(e.date)+' · '+escapeHtml(e.status)+'</p><p>'+escapeHtml(e.text)+'</p>';actions=e.status==="Отменено"?'<p class="small">Событие отменено. Отметка интереса недоступна.</p>':'<button class="primary" data-action="interest" data-id="'+e.id+'">'+(model.state.interested.includes(e.id)?'Убрать отметку интереса':'Мне интересно')+'</button><p class="small">Отметка хранится только в макете. Это не регистрация.</p>';}
+ if(detail.type==="news"){const n=model.newsItem(detail.id);title=n.title;body='<p>'+fmt(n.date)+' · '+escapeHtml(n.group==="all"?"Все группы · демо":groups[n.group])+'</p><p>'+escapeHtml(n.text)+'</p><p class="small">Источник: вымышленные данные макета. Отметка прочтения действует только в этом демонстрационном просмотре роли.</p>';actions='<button class="primary" data-action="nav" data-page="'+n.destination+'">'+({schedule:"Открыть расписание",materials:"К материалам",events:"Открыть события"}[n.destination])+' ↗</button><button class="secondary" data-action="news-read" data-id="'+n.id+'">'+(model.isNewsRead(n.id)?'Отметить непрочитанным':'Отметить прочитанным')+'</button>';}
+ if(detail.type==="material"){let m;try{m=model.material(detail.id);}catch{return "";}title=m.title;body='<p>'+escapeHtml(groups[m.group])+'</p><p>'+escapeHtml(m.body)+'</p>';}
+ return '<div class="overlay"><section role="dialog" aria-modal="true" aria-labelledby="dialog-title" class="modal"><button class="close quiet" data-action="close" aria-label="Закрыть">×</button><h2 id="dialog-title">'+escapeHtml(title)+'</h2>'+body+actions+'<button class="secondary" data-action="close">Закрыть</button></section></div>';
+}
+function render(focusTarget=null){
+ const s=model.state;const screen={today,schedule,events:eventCards,materials:materialCards,timing:timingView,manage};
+ app.innerHTML='<div class="demo-banner">ПРОТОТИП · Данные не отправляются</div><div class="shell"><aside><a class="brand studio-brand" href="#" data-action="nav" data-page="today" aria-label="Заметь наш стиль на главную"><img src="./assets/studio-logo.png" width="1680" height="1078" alt="Заметь наш стиль" decoding="async"></a><nav aria-label="Основная навигация">'+Object.entries(pages).filter(([p])=>p!=="manage"||s.role!=="family").map(([p,t],i)=>'<button data-action="nav" data-page="'+p+'" '+(s.page===p?'aria-current="page"':'')+'><span aria-hidden="true">'+["↗","▦","✳","▤","◷","⚙"][i]+'</span>'+t+'</button>').join("")+'</nav><div class="side-note">Танец.<br>Команда.<br>Ваш стиль.</div><button class="quiet reset" data-action="reset" aria-describedby="reset-journal-note">Сбросить демо</button><span class="small" id="reset-journal-note">Сброс удаляет и сохранённый демо-журнал.</span></aside><div class="workspace"><header><div><span class="eyebrow">ДЕМО ПРИЛОЖЕНИЯ</span><h1 id="screen-title" tabindex="-1">'+pages[s.page]+'</h1></div><div class="selectors"><label>Просмотр от лица<select id="role"><option value="family" '+(s.role==="family"?"selected":"")+'>Семьи · демо</option><option value="teacher" '+(s.role==="teacher"?"selected":"")+'>Преподавателя · демо</option><option value="admin" '+(s.role==="admin"?"selected":"")+'>Администратора · демо</option></select></label><label>Группа<select id="group"><option value="all">Все доступные</option>'+model.allowed().map(g=>'<option value="'+g+'" '+(s.group===g?"selected":"")+'>'+groups[g]+'</option>').join("")+'</select></label></div></header><main id="main"><div class="notice" role="status" aria-live="polite">'+escapeHtml(notice)+'</div>'+screen[s.page]()+'</main><footer>Демо «Заметь наш стиль» · Расписание студии взято с официального сайта. Остальные данные вымышлены.<br>Переключатель ролей показывает сценарии и не является авторизацией.</footer></div></div>'+modalHtml();
+ const att=document.getElementById("attendance-lesson");if(att)document.getElementById("attendance-rows").innerHTML=attendanceRows(att.value);
+ const form=document.getElementById("schedule-form");if(form){const l=model.lessons().find(l=>l.id===form.elements.lesson.value);form.elements.time.value=l.time;form.elements.status.value=l.status==="cancelled"?"cancelled":"active";}
+ const dialog=app.querySelector('[role="dialog"]');if(dialog)dialog.querySelector("button").focus();
+ else if(focusTarget){let target=document.getElementById(focusTarget);if(!target||target.disabled)target=document.getElementById("screen-title");if(target)target.focus();}
+}
+function closeDetail(){const old=detail;detail=null;render();if(old){const target=app.querySelector('[data-action="'+old.type+'"][data-id="'+(old.id||"")+'"]')||app.querySelector('[data-action="trial"]');if(target)target.focus();}}
+app.addEventListener("click",e=>{
+ const b=e.target.closest("[data-action]");if(!b||b.disabled)return;e.preventDefault();const action=b.dataset.action;
+ try{notice="";let focusTarget=null;if(action==="nav"){focusTarget="screen-title";model.navigate(b.dataset.page);detail=null;if(b.dataset.page!=="manage"){eventDraft=null;eventValidation=null;}}else if(["lesson","event","material","trial","news"].includes(action)){if(action==="material")model.material(b.dataset.id);if(action==="news")model.setNewsRead(b.dataset.id,true);detail={type:action,id:b.dataset.id};}
+ else if(action==="timing-demo-stage"){showDemoStageTime=!showDemoStageTime;updateTimingResults();document.getElementById("timing-demo-scenario")?.focus();return;}
+ else if(action==="timing-pick"){chooseTimingTeam(b.dataset.id);return;}
+ else if(action==="news-read"){model.setNewsRead(b.dataset.id,!model.isNewsRead(b.dataset.id));notice="Отметка новости изменена только в макете.";}
+ else if(action==="interest"){model.toggleInterest(b.dataset.id);notice=model.state.interested.includes(b.dataset.id)?"Интерес отмечен только в макете.":"Отметка интереса удалена.";}
+ else if(action==="material-access"){const item=model.materials().find(m=>m.id===b.dataset.id);if(!item)throw Error("Материал недоступен");model.setMaterialAvailability(item.id,item.blocked);focusTarget="material-access-"+item.id;notice=item.blocked?"Материал снят с доступа в макете.":"Доступ к демо-материалу восстановлен.";}
+ else if(action==="undo"){focusTarget="undo-change";notice=model.undoLastChange()?"Предыдущее время и статус восстановлены в макете.":"В выбранных группах нет изменений для отмены.";}
+ else if(action==="close"){closeDetail();return;}else if(action==="reset"){focusTarget="screen-title";model.reset();selectedLessonId=null;selectedAttendanceId=null;selectedEventId=null;eventDraft=null;eventValidation=null;timingQuery="";selectedTimingTeam="";showDemoStageTime=false;detail=null;notice="Демонстрационные данные восстановлены.";}render(focusTarget);}catch(err){notice=err.message;render();}
+});
+app.addEventListener("input",e=>{if(e.target.id==="timing-search"){timingQuery=e.target.value;selectedTimingTeam="";updateTimingResults();return;}const form=e.target.form;if(form?.id!=="event-form"||e.target.name==="event")return;const changed=captureEventDraft(form);const note=document.getElementById("event-draft-note");if(note)note.hidden=!changed;});
+app.addEventListener("change",e=>{
+ const t=e.target;try{notice="";
+ if(t.id==="role"){model.selectRole(t.value);eventDraft=null;eventValidation=null;detail=null;render("role");}
+ else if(t.id==="group"){model.selectGroup(t.value);eventDraft=null;eventValidation=null;detail=null;render("group");}
+ else if(t.id==="timing-collective"){if(t.value)chooseTimingTeam(t.value);else{selectedTimingTeam="";timingQuery="";const input=document.getElementById("timing-search");if(input)input.value="";updateTimingResults();}}
+ else if(t.id==="attendance-lesson"){selectedAttendanceId=t.value;document.getElementById("attendance-rows").innerHTML=attendanceRows(t.value);}
+ else if(t.dataset.attendance){const changed=model.attendance(t.dataset.lesson,t.dataset.attendance,t.value);notice=changed?"Демо-отметка сохранена в этом браузере.":"Отметка не изменилась.";document.getElementById("attendance-rows").innerHTML=attendanceRows(t.dataset.lesson);app.querySelector('[role="status"]').textContent=notice;const control=document.getElementById("attendance-"+t.dataset.lesson+"-"+t.dataset.attendance);if(control)control.focus();}
+ else if(t.name==="event"){selectedEventId=t.value;eventDraft=null;eventValidation=null;render("event-select");}
+ else if(t.name==="lesson"){selectedLessonId=t.value;const l=model.lessons().find(l=>l.id===t.value);const f=t.form;f.elements.time.value=l.time;f.elements.status.value=l.status==="cancelled"?"cancelled":"active";}
+ }catch(err){notice=err.message;render();}
+});
+app.addEventListener("submit",e=>{if(e.target.id==="event-form"){e.preventDefault();const f=e.target;selectedEventId=f.elements.event.value;eventDraft={id:selectedEventId,values:{title:f.elements.title.value,date:f.elements.date.value,text:f.elements.text.value,status:f.elements.status.value}};let focusTarget="save-event";try{const changed=model.updateEvent(selectedEventId,eventDraft.values);eventDraft=null;eventValidation=null;notice=changed?"Событие обновлено только в макете.":"В событии нет новых изменений.";}catch(err){notice="";eventValidation={message:err.message,field:err.field||""};focusTarget={title:"event-title",text:"event-text",date:"event-date",status:"event-status"}[eventValidation.field]||"save-event";}render(focusTarget);return;}if(e.target.id!=="schedule-form")return;e.preventDefault();try{const f=e.target;const changed=model.updateLesson(f.elements.lesson.value,f.elements.time.value,f.elements.status.value);notice=changed?"Расписание обновлено в макете. Изменение видно во всех разделах.":"В расписании нет новых изменений.";}catch(err){notice=err.message;}render("save-lesson");});
+app.addEventListener("keydown",e=>{if(!detail)return;if(e.key==="Escape"){e.preventDefault();closeDetail();return;}if(e.key==="Tab"){const dialog=app.querySelector('[role="dialog"]');const list=Array.from(dialog.querySelectorAll('button:not([disabled]),a[href],input,select'));if(!list.length)return;const first=list[0],last=list[list.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});
+render();
+
+</script><script src="./install.js" defer></script></body></html>
