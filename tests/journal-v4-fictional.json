@@ -1,0 +1,3 @@
+{
+  "zns-demo-timing-lab-journal-v1:/zns-demo/": "{\"version\":1,\"dataset\":\"zns-demo-april2030-v1\",\"marks\":{\"l1:У01\":\"present\",\"l1:У02\":\"absent\"},\"changes\":[{\"lessonId\":\"l1\",\"pupil\":\"У03\",\"before\":\"present\",\"after\":\"unknown\",\"by\":\"teacher\",\"revision\":4},{\"lessonId\":\"l1\",\"pupil\":\"У03\",\"before\":\"unknown\",\"after\":\"present\",\"by\":\"teacher\",\"revision\":3},{\"lessonId\":\"l1\",\"pupil\":\"У02\",\"before\":\"unknown\",\"after\":\"absent\",\"by\":\"teacher\",\"revision\":2},{\"lessonId\":\"l1\",\"pupil\":\"У01\",\"before\":\"unknown\",\"after\":\"present\",\"by\":\"teacher\",\"revision\":1}]}"
+}

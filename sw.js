@@ -1,11 +1,11 @@
 'use strict';
 const scope = new URL(self.registration.scope);
 const prefix = 'zns-demo-pwa:' + scope.pathname + ':';
-const cacheName = prefix + '2026-11-24-v4';
+const cacheName = prefix + '2026-11-24-v5';
 const index = new URL('index.html', scope).href;
 const assets = [
-  'index.html', 'install.js', 'assets/studio-logo.png', 'manifest.webmanifest', 'icons/apple-touch-icon.png',
-  'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png'
+  'index.html', 'studio-data.js', 'install.js', 'assets/studio-logo.png', 'manifest.webmanifest', 'icons/apple-touch-icon.png',
+  'icons/brand-mark-v2-180.png', 'icons/brand-mark-v2-192.png', 'icons/brand-mark-v2-512.png', 'icons/brand-mark-v2-maskable-512.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png'
 ].map(path => new URL(path, scope).href);
 const permitted = new Set(assets);
 self.addEventListener('install', event => {
